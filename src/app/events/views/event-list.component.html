@@ -1,0 +1,46 @@
+<h1 [innerText]="title"></h1>
+<hr/>
+Type in the box to see two way binding : <input type="text" [(ngModel)]="cityName" />
+<p>{{cityName}}</p>
+<hr>
+<h3>{{subtitle}}</h3>
+Search by name <input type="text" [(ngModel)]='filterBy' />
+<div class="container">
+    <table class="table table-bordered" *ngIf="events && events.length > 0">
+        <thead>
+            <tr>
+                <th class="clsTh">Event Name</th>
+                <th class="clsTh">Event code</th>
+                <th class="clsTh">Event Release Date</th>
+                <th class="clsTh">Event Description</th>
+                <th class="clsTh">Event Fees</th>
+                <th class="clsTh">Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let event of events | eventFilter:filterBy">
+                <td class="clsTd">{{event.eventName | firstLetterCapital }}</td>
+                <td class="clsTd">{{event.eventCode | lowercase}}</td>
+                <td class="clsTd">{{event.releaseDate | date:'medium' | uppercase}}</td>
+                <td class="clsTd">{{event.description | lowercase}}</td>
+                <td class="clsTd" [ngClass]="getColorClass(event.fees)">
+                    <span [ngSwitch]="event.fees">
+                        <span *ngSwitchCase="300" class="label label-warning">Cheap</span>
+                        <span *ngSwitchCase="500" class="label label-warning">Medium</span>
+                        <span *ngSwitchDefault class="label label-warning">Expensive</span>
+                    </span>    
+                    <!--{{event.fees | currency:'USD':true}}-->
+                </td>
+                <td class="clsTd">
+                    <button class="btn btn-danger" (click)="displayPhoto(event)">Display photo</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="changeMe(3, 'Backbase - Seminar')" class="btn btn-primary">Change Me</button>
+    
+    <div class="container" *ngIf="selectedEvent">
+        <event-thumbnails [event]="selectedEvent" (photoDetails)="isPhotoClicked($event)"></event-thumbnails>
+    </div>
+    <p [innerText]="photoClickedMessage"></p>
+</div>
