@@ -5,4 +5,4 @@ Steps to run:
 - npm install
 - npm start
 
-![Angular2 Project Image](Angular2-project.PNG)
+![Angular2 Project Image](Angular2-project.PNG?raw=true)
