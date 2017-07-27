@@ -4,3 +4,5 @@ Ref: Base quickstart code picked up from : https://github.com/angular/quickstart
 Steps to run:
 - npm install
 - npm start
+
+![alt text](https://github.com/niranjangaikwad/Angular2/blob/master/Angular2-project.PNG)
