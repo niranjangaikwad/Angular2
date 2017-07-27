@@ -5,4 +5,4 @@ Steps to run:
 - npm install
 - npm start
 
-![alt text](http://github.com/niranjangaikwad/Angular2/blob/master/Angular2-project.PNG)
+![Angular2 Project Image](https://github.com/niranjangaikwad/Angular2/blob/master/Angular2-project.PNG)
