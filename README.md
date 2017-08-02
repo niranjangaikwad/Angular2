@@ -1,4 +1,4 @@
-# Project displays Events list and Employoee list Portal
+# Project displays Events list, Employoee list and Users list Portal
 
 Steps to run:
 - Download and extract zip, open cmd in extracted folder and run following commands
