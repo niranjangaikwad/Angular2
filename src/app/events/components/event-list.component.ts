@@ -11,11 +11,11 @@ import { Event } from '../models/event.model';
     `*/
     templateUrl: "app/events/views/event-list.component.html",
     styles: [`
-        .clsTd { background: #ccc; }
-        .clsTh { background: #baa; }
-        .cheap { background: green; }
-        .medium { background: gray; }
-        .expensive {background: brown; }
+        .clsTd { background: #cff; }
+        .clsTh { background: #abe; }
+        .cheap { background: #afb; }
+        .medium { background: #fa2; }
+        .expensive {background: #f22; }
     `]
 })
 

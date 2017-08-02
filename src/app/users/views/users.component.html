@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th class="clsTh">ID</th>
+        <th class="clsTh">Name</th>
+        <th class="clsTh">Email</th>
+        <th class="clsTh">Phone</th>
+        <th class="clsTh">Website</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td class="clsTd">{{user.id}}</td>
+        <td class="clsTd">{{user.name}}</td>
+        <td class="clsTd">{{user.email}}</td>
+        <td class="clsTd">{{user.phone}}</td>
+        <td class="clsTd">{{user.website}}</td>
+    </tr>
+</table>
